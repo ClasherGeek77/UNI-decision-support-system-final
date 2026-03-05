@@ -162,8 +162,9 @@ def generate_html(results):
 """.format(results_json=results_json)
 
     
-    # Write to file
-    with open('index.html', 'w', encoding='utf-8') as f:
+    # Write to file in root directory
+    output_path = Path(__file__).parent.parent / 'index.html'
+    with open(output_path, 'w', encoding='utf-8') as f:
         f.write(html_content)
 
 
